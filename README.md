@@ -1,2 +1,2 @@
-# CXR-Automatic-Anatomical-Detection
+# CXR Automatic Anatomical Detection
 Chest X-ray image Automatic Anatomical Detection
