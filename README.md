@@ -3,6 +3,8 @@
 This repository contains code and resources for automatic detection and localization of anatomical regions in Chest X-rays.  
 It is part of a broader research effort on multimodal explainability and report validation for medical imaging.
 
+![output CXR](figure/output.png)
+
 ---
 
 ## 🚀 Overview
@@ -31,14 +33,11 @@ The model aims to provide reliable region detection for downstream tasks such as
 ---
 
 ## 🧠 Model
-Currently exploring:
-- [DETR-based](https://arxiv.org/abs/2005.12872) object detection
-- [UNet/DeepLabV3](https://arxiv.org/abs/1706.05587) for region segmentation
-- Integration with [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO) for phrase-to-region alignment
-
+This repo contains a legacy and fine-tuned implementation of the following model:
+- [DETR-based](https://github.com/facebookresearch/detr.git) object detection
 ---
-📥 Model Checkpoint
-Please download the pretrained checkpoint from this [link]{https://drive.google.com/file/d/1MQFN8cqNiSd09y1wug0H_OAPUrnNuvgu/view?usp=drive_link}
+## 📥 Model Checkpoint
+Please download the pretrained checkpoint from this [link](https://drive.google.com/file/d/1MQFN8cqNiSd09y1wug0H_OAPUrnNuvgu/view?usp=drive_link)
 
 and place it in the ```output/``` directory before running the code.
 
@@ -54,10 +53,9 @@ pip install -r requirements.txt
 
 # Run inference on sample image
 python test.py --img_org="Path/to/image"
+```
 
-
-
-## 🧪 Usage
+## 📊 Evaluation
 
 Performance is measured using:
 
@@ -67,8 +65,16 @@ Performance is measured using:
 
 - Anatomical landmark localization accuracy
 
+## 🧠 Training
 
-🧾 Citation
+To train the model, you will need access to the [Chest ImaGenome dataset](https://physionet.org/content/chest-imagenome/1.0.0/).  
+Once the dataset is downloaded and properly organized, you can start training by running:
+
+```bash
+python main.py
+```
+
+## 🧾 Citation
 
 If you use this work, please cite:
 ```bash
